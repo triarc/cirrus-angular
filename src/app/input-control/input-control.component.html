@@ -1,0 +1,33 @@
+<form class="form" [formGroup]="person.formGroup">
+
+  <div class="row">
+    <input class="e2e-first-name-input" [formControl]="person.firstName.control" [(ngModel)]="person.firstName.value"
+           (blur)="person.firstName.confirmValue()"/>
+
+    <span class="e2e-first-name-validator">{{person.firstName.valid}}</span>
+    <span class="e2e-first-name-model">{{personX.firstName}}</span>
+  </div>
+  <div class="row">
+    <input class="e2e-last-name-input" [formControl]="person.lastName.control"
+           [ngModel]="person.lastName.value"
+           (blur)="person.lastName.confirmValue()"/>
+
+    <span class="e2e-last-name-validator">{{person.lastName.valid}}</span>
+    <span class="e2e-last-name-model">{{personX.lastName}}</span>
+  </div>
+  <div class="row">
+    <input class="e2e-limb-count-input" type="number" [formControl]="person.limbCount.control" [(ngModel)]="person.limbCount.value">
+    <span class="e2e-limb-count-validator">  {{person.limbCount.valid}}</span>
+    <span class="e2e-limb-count-model">{{personX.limbCount}}</span>
+  </div>
+
+  <div class="row">
+    <span>Form valid: </span>
+    <span class="e2e-form-status" >{{person.formGroup.valid}}</span>
+  </div>
+
+  <div class="row">
+    <button class="e2e-reset-button" (click)="reset()">Reset</button>
+  </div>
+
+</form>
