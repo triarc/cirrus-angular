@@ -28,3 +28,4 @@ testem.log
 .DS_Store
 Thumbs.db
 /junit
+/checkstyle-result.xml
